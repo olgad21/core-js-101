@@ -74,8 +74,10 @@ function getAverage(value1, value2) {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  const a = Math.abs(x1) + Math.abs(x2);
+  const b = Math.abs(y1) + Math.abs(y2);
+  return Math.sqrt(a ** 2 + b ** 2);
 }
 
 /**
@@ -90,8 +92,8 @@ function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(/* a, b */) {
-  throw new Error('Not implemented');
+function getLinearEquationRoot(a, b) {
+  return -b / a;
 }
 
 
@@ -129,8 +131,10 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
-  throw new Error('Not implemented');
+function getLastDigit(value) {
+  const valueStr = value.toString();
+  const lastSymb = valueStr[valueStr.length - 1];
+  return +lastSymb;
 }
 
 
@@ -145,8 +149,8 @@ function getLastDigit(/* value */) {
  *     '37'     => 37
  * '-525.5'     => -525.5
  */
-function parseNumberFromString(/* value */) {
-  throw new Error('Not implemented');
+function parseNumberFromString(value) {
+  return +value;
 }
 
 /**
@@ -225,6 +229,10 @@ function isPrime(/* n */) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(/* value, def */) {
+  // if (typeof Number(value) === 'number') {
+  //   return Number(value);
+  // }
+  // return def;
   throw new Error('Not implemented');
 }
 
