@@ -116,6 +116,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
+  // return Math.atan2(y2 - y1, x2 - x1);
   throw new Error('Not implemented');
 }
 
@@ -242,7 +243,11 @@ function toNumber(/* value, def */) {
   // if (typeof Number(value) === 'number') {
   //   return Number(value);
   // }
+  // if (value instanceof Number) {
+  //   return value;
+  // }
   // return def;
+
   throw new Error('Not implemented');
 }
 
