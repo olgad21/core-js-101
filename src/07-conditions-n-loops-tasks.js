@@ -180,6 +180,7 @@ function isInsideCircle(/* circle, point */) {
  *   'entente' => null
  */
 function findFirstSingleChar(/* str */) {
+  // return str.split('').filter((el, idx, array) => array.indexOf(el) === idx).toString;
   throw new Error('Not implemented');
 }
 
